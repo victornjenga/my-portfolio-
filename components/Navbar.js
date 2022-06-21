@@ -65,12 +65,12 @@ function Navbar() {
                     Lets build something legendary together
                   </p>
                 </div>
-                <div className="md:hidden ml-4">
+                <div className="md:hidden ml-4 mb-5">
                   <ul className="  flex flex-col md:hidden  ">
                     <Link href="/">
                       <li
                         onClick={() => setOpen(!open)}
-                        className="py-4 text-sm"
+                        className="py-4  text-lg "
                       >
                         Home
                       </li>
@@ -78,7 +78,7 @@ function Navbar() {
                     <Link href="/#about">
                       <li
                         onClick={() => setOpen(!open)}
-                        className="py-4 text-sm"
+                        className="py-4  text-lg "
                       >
                         About
                       </li>
@@ -86,7 +86,7 @@ function Navbar() {
                     <Link href="/#skills">
                       <li
                         onClick={() => setOpen(!open)}
-                        className="py-4 text-sm"
+                        className="py-4  text-lg "
                       >
                         Skills
                       </li>
@@ -94,7 +94,7 @@ function Navbar() {
                     <Link href="/#projects">
                       <li
                         onClick={() => setOpen(!open)}
-                        className="py-4 text-sm"
+                        className="py-4  text-lg "
                       >
                         Projects
                       </li>
@@ -102,7 +102,7 @@ function Navbar() {
                     <Link href="/#contact">
                       <li
                         onClick={() => setOpen(!open)}
-                        className="py-4 text-sm"
+                        className="py-4  text-lg "
                       >
                         Contact
                       </li>
