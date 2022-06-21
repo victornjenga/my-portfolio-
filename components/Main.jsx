@@ -18,12 +18,11 @@ const Main = () => {
             focused on building responsive front-end web applications while
             learning back-end technologies
           </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+          <div className="flex items-center justify-between py-4">
             <a
               href="https://www.linkedin.com/in/victor-njenga-b78857227/"
               target="_blank"
               rel="noreferrer"
-              vvv
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                 <FaLinkedinIn />
@@ -38,15 +37,16 @@ const Main = () => {
                 <FaGithub />
               </div>
             </a>
-            <Link href="">
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <AiOutlineMail />
-              </div>
-            </Link>
+
+            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+              <AiOutlineMail />
+            </div>
             <Link href="/resume">
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <BsFillPersonLinesFill />
-              </div>
+              <a>
+                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <BsFillPersonLinesFill />
+                </div>
+              </a>
             </Link>
           </div>
         </div>

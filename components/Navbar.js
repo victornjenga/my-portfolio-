@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 function Navbar() {
   const [open, setOpen] = useState();
   return (
-    <div className="w-full h-15 md:h-20 shadow-xl z-[100] fixed">
-      <div className="flex bg-slate-200 justify-between items-center w-full h-full px-2 ">
+    <div className="w-full   shadow-xl z-[100] fixed">
+      <div className="flex  bg-slate-200 justify-between items-center w-full  h-20 px-2 ">
         <h2 className="text-black font-sans italic ">VICTOR</h2>
         <div>
           <ul className="hidden md:flex ">
