@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 const Main = () => {
   return (
-    <div className="w-full h-screen text-center">
+    <div className="w-full h-screen  mt-15 text-center">
       <div className=" w-full h-full p-2 flex justify-center items-center">
         <div className="flex flex-col justify-center text-center items-center">
           <p>Lets build something together</p>

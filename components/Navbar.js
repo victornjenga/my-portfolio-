@@ -109,7 +109,7 @@ function Navbar() {
                     </Link>
                   </ul>
                   <div className="pt-4">
-                    <p className="uppercase tracking-widest text-[#5651e5]">
+                    <p className="uppercase tracking-widest text-red-600">
                       Let&#39;s Connect
                     </p>
                     <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
