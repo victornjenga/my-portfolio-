@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 function Navbar() {
   const [open, setOpen] = useState();
   return (
-    <div className="w-full h-20 shadow-xl z-[100] fixed">
+    <div className="w-full h-15 md:h-20 shadow-xl z-[100] fixed">
       <div className="flex bg-slate-200 justify-between items-center w-full h-full px-2 ">
         <h2 className="text-black font-sans italic ">VICTOR</h2>
         <div>
@@ -108,7 +108,7 @@ function Navbar() {
                       </li>
                     </Link>
                   </ul>
-                  <div className="pt-4">
+                  <div className="py-6">
                     <p className="uppercase tracking-widest text-red-600">
                       Let&#39;s Connect
                     </p>
