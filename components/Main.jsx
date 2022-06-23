@@ -6,12 +6,15 @@ const commonStyles =
 const Main = () => {
   return (
     <div>
-      <div className="text-center mx-3  space-y-2 flex flex-col items-center justify-center">
+      <div className="text-center mx-3 h-[500px] space-y-2 flex flex-col items-center justify-center">
         <p className="text-xl font-bold">
           Hi,I am <span className="text-red-600">Victor</span>
         </p>
-        <h3 className="py-2 text-gray-600">A Front-End Web Developer </h3>
-        <p className="py-4 text-gray-500 max-w-[70%] w-auto">
+        <h1 className="text-3xl py-3 font-bold text-blue-600">
+          A Front-End Web Developer
+        </h1>
+
+        <p className="text-lg">
           I am a Front-end developer specialising in building (and occassinally
           designing) exeptional digital experiences.Currently,I,m focused on
           building responsive front-end web applications while learning back-end
