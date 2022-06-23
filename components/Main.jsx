@@ -5,8 +5,8 @@ const commonStyles =
   "min-h-[70px] sm:px-3 px-2  flex justify-center items-center border-black  border-2";
 const Main = () => {
   return (
-    <div>
-      <div className="text-center mx-3 h-[500px] space-y-2 flex flex-col items-center justify-center">
+    <div className="pt-10">
+      <div className="text-center mx-3 h-[550px] space-y-2 flex flex-col items-center justify-center">
         <p className="text-xl font-bold">
           Hi,I am <span className="text-red-600">Victor</span>
         </p>
@@ -14,7 +14,7 @@ const Main = () => {
           A Front-End Web Developer
         </h1>
 
-        <p className="text-lg">
+        <p className="">
           I am a Front-end developer specialising in building (and occassinally
           designing) exeptional digital experiences.Currently,I,m focused on
           building responsive front-end web applications while learning back-end
