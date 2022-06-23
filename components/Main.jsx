@@ -1,55 +1,54 @@
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import Link from "next/link";
+import React from "react";
+import { FaGithub, FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+
+const commonStyles =
+  "min-h-[70px] sm:px-3 px-2  flex justify-center items-center border-black  border-2";
 const Main = () => {
   return (
-    <div className="text-center pt-[8%] mx-3 h-[500px] space-y-2 flex flex-col items-center justify-center">
-      <div className=" w-full h-full p-2 flex justify-center items-center">
-        <div className="flex flex-col justify-center text-center items-center">
-          <p>Lets build something together</p>
-          <h1>
-            Hi,I am <span className="text-red-600">Victor</span>
-          </h1>
-          <h1 className="py-2 text-gray-600">A Front-End Web Developer </h1>
-          <p className="py-4 text-gray-500 max-w-[70%] w-auto">
-            I am a Front-end developer specialising in building (and
-            occassinally designing) exeptional digital experiences.Currently,I,m
-            focused on building responsive front-end web applications while
-            learning back-end technologies
-          </p>
-          <div className="flex items-center justify-between space-x-3 py-4">
-            <a
-              href="https://www.linkedin.com/in/victor-njenga-b78857227/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <FaLinkedinIn />
-              </div>
-            </a>
-            <a
-              href="https://github.com/victornjenga"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                <FaGithub />
-              </div>
-            </a>
+    <div>
+      <div className="text-center mx-3 h-[500px] space-y-2 flex flex-col items-center justify-center">
+        <p className="text-xl font-bold">
+          Hi,I am <span className="text-red-600">Victor</span>
+        </p>
+        <h1 className="py-2 text-gray-600">A Front-End Web Developer </h1>
+        <p className="py-4 text-gray-500 max-w-[70%] w-auto">
+          I am a Front-end developer specialising in building (and occassinally
+          designing) exeptional digital experiences.Currently,I,m focused on
+          building responsive front-end web applications while learning back-end
+          technologies
+        </p>
 
-            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail />
-            </div>
-            <Link href="/resume">
-              <a>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <BsFillPersonLinesFill />
-                </div>
-              </a>
-            </Link>
+        <div className="flex space-x-2 py-3">
+          <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+            <FaFacebookF />
+          </div>
+          <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+            <FaTwitter />
+          </div>
+          <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+            <FaLinkedinIn />
           </div>
         </div>
+        {/* <div className="grid text-black sm:grid-cols-3 grid-cols-2 justify-center items-center w-[60%]  ">
+          <div className={`rounded-tl-2xl  ${commonStyles}`}>
+            <p className="mx-3 spaxe-x-3">Web Development</p>
+          </div>
+          <div className={`rounded-tr-2xl sm:rounded-none  ${commonStyles}`}>
+            <p className="mx-3 spaxe-x-3">Mobile Apps</p>
+          </div>
+          <div className={`md:rounded-tr-2xl ${commonStyles}`}>
+            <p className="mx-3 spaxe-x-3"> System Development</p>
+          </div>
+          <div className={`md:rounded-bl-2xl ${commonStyles}`}>
+            <p className="mx-3 spaxe-x-3">Ecommerce Intergration</p>
+          </div>
+          <div className={`rounded-bl-2xl sm:rounded-none  ${commonStyles}`}>
+            <p className="spaxe-x-3"> Web Design</p>
+          </div>
+          <div className={`rounded-br-2xl ${commonStyles}`}>
+            <p className="px-3 spaxe-x-3">Website/App Maintenance</p>
+          </div>
+        </div> */}
       </div>
     </div>
   );

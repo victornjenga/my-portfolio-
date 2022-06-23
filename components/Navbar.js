@@ -64,27 +64,27 @@ const Navbar = () => {
 
           <ul className="block space-y-4 pt-5 ">
             <Link href="/">
-              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
+              <li onClick={() => setOpen(!open)} className="font-sm ">
                 Home
               </li>
             </Link>
             <Link href="/#about">
-              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
+              <li onClick={() => setOpen(!open)} className="font-sm ">
                 About
               </li>
             </Link>
             <Link href="/#skills">
-              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
+              <li onClick={() => setOpen(!open)} className="font-sm ">
                 Skills
               </li>
             </Link>
             <Link href="/#projects">
-              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
+              <li onClick={() => setOpen(!open)} className="font-sm ">
                 Projects
               </li>
             </Link>
             <Link href="/#contact">
-              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
+              <li onClick={() => setOpen(!open)} className="font-sm ">
                 Contact
               </li>
             </Link>
