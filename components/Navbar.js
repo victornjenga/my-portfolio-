@@ -1,162 +1,113 @@
-import Link from "next/link";
-import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { useRouter } from "next/router";
-// import { AiOutlineClose } from "@heroicons/react/ai ";
-function Navbar() {
+import React, { useState } from "react";
+import Link from "next/link";
+import { FaGithub, FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+
+const Navbar = () => {
   const [open, setOpen] = useState();
   return (
-    <div className="w-full   shadow-xl z-[100] fixed">
-      <div className="flex  bg-slate-200 justify-between items-center w-full  h-20 px-2 ">
-        <h2 className="text-black font-sans italic ">VICTOR</h2>
-        <div>
-          <ul className="hidden md:flex ">
+    <div className="fixed w-full z-10">
+      <div className="w-full h-16  bg-slate-200 flex  justify-around items-center text-center">
+        <h2 className="text-xl font-bold italic">Victor</h2>
+
+        <ul className=" hidden space-x-4  md:flex">
+          <Link href="/">
+            <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              Home
+            </li>
+          </Link>
+          <Link href="/#about">
+            <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              About
+            </li>
+          </Link>
+          <Link href="/#skills">
+            <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              Skills
+            </li>
+          </Link>
+          <Link href="/#projects">
+            <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              Projects
+            </li>
+          </Link>
+          <Link href="/#contact">
+            <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              Contact
+            </li>
+          </Link>
+        </ul>
+
+        <AiOutlineMenu
+          className="cursor-pointer md:hidden"
+          onClick={() => setOpen(true)}
+        />
+      </div>
+      {open && (
+        <div className="bg-slate-200 md:hidden top-0 h-full px-5 w-[75%] b-0 fixed z-10">
+          <div className="flex py-5 justify-between">
+            <h2
+              onClick={() => setOpen(false)}
+              className="text-xl font-bold italic"
+            >
+              <Link href="/#home">Victor</Link>
+            </h2>
+
+            <AiOutlineClose
+              onClick={() => setOpen(false)}
+              className="text-2xl cursor-pointer shadow-lg shadow-slate-600 p-1 rounded-full font-bold "
+            />
+          </div>
+          <div className="mx-1 text-xl border-b border-gray-600 border-solid ">
+            <p className="py-5">Lets Build Something Legendary Together</p>
+          </div>
+
+          <ul className="block space-y-4 pt-5 ">
             <Link href="/">
-              <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
                 Home
               </li>
             </Link>
             <Link href="/#about">
-              <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
                 About
               </li>
             </Link>
             <Link href="/#skills">
-              <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
                 Skills
               </li>
             </Link>
             <Link href="/#projects">
-              <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
                 Projects
               </li>
             </Link>
             <Link href="/#contact">
-              <li className=" font-bold ml-10 px-4 text-sm uppercase hover:border-b border-orange-400">
+              <li onClick={() => setOpen(!open)} className="py-4  text-lg ">
                 Contact
               </li>
             </Link>
           </ul>
-          <div className="md:hidden">
-            <div
-              className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer "
-              onClick={() => setOpen(!open)}
-            >
-              <AiOutlineMenu />
+          <h2 className="pt-5 text-xl   text-red-600">Lets Connect</h2>
+          <div className="flex space-x-2 py-2">
+            <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+              <FaFacebookF />
+            </div>
+            <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+              <FaGithub />
+            </div>
+            <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+              <FaTwitter />
+            </div>
+            <div className="shadow-lg w-10 h-10 justify-center items-center flex shadow-gray-400 rounded-full ">
+              <FaLinkedinIn />
             </div>
           </div>
-          {open && (
-            <div className="fixed md:hidden left-0 top-0 w-full h-screen bg-black/70">
-              <div className="fixed left-0 top-0 w-[75%] md:w-[45%] h-screen bg-slate-300">
-                <div className="flex mt-4 w-full items-center justify-between">
-                  <h2 className="text-black font-sans italic ">VICTOR</h2>
-                  <div
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer mr-4 "
-                    onClick={() => setOpen(!open)}
-                  >
-                    <AiOutlineClose />
-                  </div>
-                </div>
-                <div className="border-b border-gray-400 p-3 my-4">
-                  <p className="w-full py-4">
-                    {" "}
-                    Lets build something legendary together
-                  </p>
-                </div>
-                <div className="md:hidden ml-4 mb-5">
-                  <ul className="  flex flex-col md:hidden  ">
-                    <Link href="/">
-                      <li
-                        onClick={() => setOpen(!open)}
-                        className="py-4  text-lg "
-                      >
-                        Home
-                      </li>
-                    </Link>
-                    <Link href="/#about">
-                      <li
-                        onClick={() => setOpen(!open)}
-                        className="py-4  text-lg "
-                      >
-                        About
-                      </li>
-                    </Link>
-                    <Link href="/#skills">
-                      <li
-                        onClick={() => setOpen(!open)}
-                        className="py-4  text-lg "
-                      >
-                        Skills
-                      </li>
-                    </Link>
-                    <Link href="/#projects">
-                      <li
-                        onClick={() => setOpen(!open)}
-                        className="py-4  text-lg "
-                      >
-                        Projects
-                      </li>
-                    </Link>
-                    <Link href="/#contact">
-                      <li
-                        onClick={() => setOpen(!open)}
-                        className="py-4  text-lg "
-                      >
-                        Contact
-                      </li>
-                    </Link>
-                  </ul>
-                  <div className="py-6">
-                    <p className="uppercase tracking-widest text-red-600">
-                      Let&#39;s Connect
-                    </p>
-                    <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                      <a
-                        href="https://www.linkedin.com/in/victor-njenga-b78857227/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                          <FaLinkedinIn />
-                        </div>
-                      </a>
-                      <a
-                        href="https://github.com/victornjenga"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                          <FaGithub />
-                        </div>
-                      </a>
-                      <Link href="/#contact">
-                        <div
-                          onClick={() => setNav(!nav)}
-                          className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                        >
-                          <AiOutlineMail />
-                        </div>
-                      </Link>
-                      <Link href="/resume">
-                        <div
-                          onClick={() => setNav(!nav)}
-                          className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                        >
-                          <BsFillPersonLinesFill />
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
-      </div>
+      )}
     </div>
   );
-}
+};
 
 export default Navbar;

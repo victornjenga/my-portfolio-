@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 const Main = () => {
   return (
-    <div className="w-full h-screen  mt-15 text-center">
+    <div className="text-center pt-[8%] mx-3 h-[500px] space-y-2 flex flex-col items-center justify-center">
       <div className=" w-full h-full p-2 flex justify-center items-center">
         <div className="flex flex-col justify-center text-center items-center">
           <p>Lets build something together</p>
@@ -18,7 +18,7 @@ const Main = () => {
             focused on building responsive front-end web applications while
             learning back-end technologies
           </p>
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between space-x-3 py-4">
             <a
               href="https://www.linkedin.com/in/victor-njenga-b78857227/"
               target="_blank"
