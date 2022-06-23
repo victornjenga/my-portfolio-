@@ -14,7 +14,7 @@ const Main = () => {
           A Front-End Web Developer
         </h1>
 
-        <p className="md:text-lg">
+        <p className="md:text-lg md:mx-5">
           I am a Front-end developer specialising in building (and occassinally
           designing) exeptional digital experiences.Currently,I,m focused on
           building responsive front-end web applications while learning back-end
